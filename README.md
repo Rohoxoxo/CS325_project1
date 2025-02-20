@@ -11,10 +11,8 @@ The goal is to evaluate how smaller models perform on simple text generation tas
 
 Follow these steps to set up the project on your local machine.
 
-### 1. Clone the Repository
-
 ```bash
-git clone <your-github-repo-url>
+git clone https://github.com/Rohoxoxo/CS325_project1.git
 cd CS325_Project1
 
 2. Create and Activate Virtual Environment
@@ -70,3 +68,5 @@ Author
 Name: Rohit Chandel
 Course: CS325 — Spring 2025
 Project: Local Language Models (Project 1)
+
+A
