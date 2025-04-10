@@ -1,7 +1,3 @@
-Absolutely! Here's a properly formatted `README.md` for **Project 2** in the same layout and tone as your **Project 1 README**, but **without placing all the steps in a single code block**—to avoid losing points again.
-
----
-
 # 🕸️ CS325 Project 2 - Web Scraper for News Headlines
 
 ## Project Overview
@@ -115,14 +111,6 @@ Duplicate headlines are automatically removed using Python’s `set()`.
 
 ---
 
-## ⚠️ Notes
-
-- Some sites may return 403 or 401 errors if they block bots/scrapers.
-- Avoid scraping aggressively to respect websites’ terms of service.
-- If a site blocks scraping, simply remove it from `urls.txt`.
-
----
-
 ## 🧪 Libraries Used
 
 - `requests` — To fetch webpage data
@@ -136,7 +124,3 @@ Duplicate headlines are automatically removed using Python’s `set()`.
 **Name**: Rohit Chandel  
 **Course**: CS325 — Spring 2025  
 **Project**: Web Scraping for News Headlines (Project 2)
-
----
-
-Let me know if you want me to drop this directly into your `README.md` file too!
