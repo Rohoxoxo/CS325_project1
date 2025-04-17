@@ -1,0 +1,13 @@
+name: project3_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - requests
+      - beautifulsoup4
+      - selenium
+      - torch
+      - transformers
