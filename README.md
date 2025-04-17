@@ -164,5 +164,3 @@ Listed in `environment.yaml`. Main libraries include:
 **Project**: Integrated News Sentiment Analyzer (Project 3)
 
 ---
-
-Let me know if you want the **`.gitignore`** next or if you're ready to push everything to GitHub for final submission ✅
