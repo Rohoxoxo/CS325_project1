@@ -1,40 +1,50 @@
-# This is a base class to define the common behavior for any model (e.g., scraping, sentiment analysis, etc.)
-# It will act like a "template" class that other modules (like scraper or sentiment analyzer) can inherit from.
+# base_model.py
+# This is a reusable base class for any module that deals with reading from or writing to files.
+# Both the Scraper and SentimentAnalyzer will inherit from this class to avoid repeating common code.
 
 class BaseModel:
     def __init__(self, input_file_path, output_file_path):
         """
-        Initializes the base model with input and output file paths.
+        Constructor method that sets up input and output file paths.
 
-        :param input_file_path: Path to the file that contains input data
-        :param output_file_path: Path to the file where output will be saved
+        Parameters:
+        - input_file_path (str): File path where the class should read input data (e.g., scraped headlines).
+        - output_file_path (str): File path where the class should save output data (e.g., sentiments).
         """
         self.input_file_path = input_file_path
         self.output_file_path = output_file_path
 
     def read_input_file(self):
         """
-        Reads lines from the input file and returns them as a list.
+        Reads content from the input file line by line.
 
-        :return: List of lines (strings) from the input file
+        Returns:
+        - A list of strings, where each string is a line from the file (i.e., a headline).
+        - It also removes any newline characters at the end of each line using strip().
         """
         with open(self.input_file_path, 'r') as file:
             lines = file.readlines()
-            # Strip newline characters and return list of cleaned lines
             return [line.strip() for line in lines]
 
     def write_output_file(self, lines):
         """
-        Writes a list of lines to the output file.
+        Writes a list of strings (lines) to the output file, one per line.
 
-        :param lines: List of strings to write to the file
+        Parameters:
+        - lines (list of str): Each item in the list is written as a separate line in the file.
         """
         with open(self.output_file_path, 'w') as file:
             for line in lines:
-                file.write(line + '\n')
+                file.write(line + '\n')  # Adds a newline character at the end of each line
 
     def process(self):
         """
-        A placeholder method that should be overridden in child classes.
+        A placeholder method that is meant to be implemented by child classes.
+
+        This method will be overridden by:
+        - The Scraper class (to handle scraping and saving headlines)
+        - The SentimentAnalyzer class (to read headlines and generate sentiments)
+
+        If a subclass does not override this method, running it will raise an error.
         """
         raise NotImplementedError("Subclasses must implement this method.")
